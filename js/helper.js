@@ -239,11 +239,20 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+   map.fitBounds(mapBounds);
+});
+
+
+var addToList = function(id, obj){
+
+$(id).append(HTMLmobile.replace("%data%", obj.contacts.mobile));
+ $(id).append(HTMLemail.replace("%data%", obj.contacts.email));
+ $(id).append(HTMLlocation.replace("%data%", obj.contacts.location));
+ $(id).append(HTMLgithub.replace("%data%", obj.contacts.github));
+};
