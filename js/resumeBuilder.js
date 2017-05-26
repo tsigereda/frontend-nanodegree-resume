@@ -40,7 +40,7 @@ var bio = {
 bio.display();
 
 var education = {
-    school: [{
+    schools: [{
         name: "Haramaya University/ Alemaya University",
         location: "Harrar",
         degree: "Bachelors degree in Computer Science and IT",
@@ -68,7 +68,7 @@ var education = {
         }],
     display: function () {
         $("#education").append(HTMLschoolStart);
-        this.school.forEach(function (element) {
+        this.schools.forEach(function (element) {
             $(".education-entry:last").append(HTMLschoolName.replace("%data%", element.name));
             $(".education-entry:last").append(HTMLschoolDegree.replace("%data%", element.degree));
             $(".education-entry:last").append(HTMLschoolDates.replace("%data%", element.dates));
@@ -172,14 +172,5 @@ projects.display = function () {
     }, this);
 };
 projects.display();
-
-
-
-$(document).click(function (loc) {
-    var x = loc.pageX;
-    var y = loc.pageY;
-
-    console.log(x + y);
-});
 
 $("#mapDiv").append(googleMap);
