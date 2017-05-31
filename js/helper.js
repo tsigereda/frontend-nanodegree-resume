@@ -84,13 +84,13 @@ function initializeMap() {
     return locations;
   }
 
- 
+
   function createMapMarker(placeData) {
 
-    var lat = placeData.geometry.location.lat();  
-    var lon = placeData.geometry.location.lng();  
-    var name = placeData.formatted_address;   
-    var bounds = window.mapBounds;            
+    var lat = placeData.geometry.location.lat();
+    var lon = placeData.geometry.location.lng();
+    var name = placeData.formatted_address;
+    var bounds = window.mapBounds;
 
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({

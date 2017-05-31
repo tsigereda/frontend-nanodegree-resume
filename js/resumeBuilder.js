@@ -80,9 +80,9 @@ var education = {
         $("#education").append(HTMLschoolStart);
         this.OnlineCourses.forEach(function (element) {
             $(".education-entry:last").append(HTMLonlineTitle.replace("%data%", element.title));
-            $(".education-entry:last").append(HTMLonlineSchool.replace("%data%",element.school));
-            $(".education-entry:last").append(HTMLonlineDates.replace("%data%",element.dates));
-            $(".education-entry:last").append(HTMLonlineURL.replace("%data%",element.url));
+            $(".education-entry:last").append(HTMLonlineSchool.replace("%data%", element.school));
+            $(".education-entry:last").append(HTMLonlineDates.replace("%data%", element.dates));
+            $(".education-entry:last").append(HTMLonlineURL.replace("%data%", element.url));
         }, this);
     }
 };
